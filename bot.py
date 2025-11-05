@@ -18,12 +18,12 @@ import logging
 import asyncio
 
 # ========== НАСТРОЙКИ ==========
-TOKEN = "8259429897:AAGeYH9i-OTWiRqDChsOTBaLK18MP0g-APs"
-ADMIN_ID = 8496308542
+TOKEN = os.environ.get("BOT_TOKEN")
+ADMIN_ID = os.environ.get("ADMIN_ID")
 
 # ========== НАСТРОЙКИ ДЛЯ PYTHONANYWHERE ==========
-BOT_API_URL = "http://DollieLand.pythonanywhere.com"
-ADMIN_TOKEN = "dollie_secret_2024"
+BOT_API_URL = os.environ.get("BOT_API_URL")
+ADMIN_TOKEN = os.environ.get("ADMIN_TOKEN")
 
 # ========== ХРАНИЛИЩА (в памяти) ==========
 orders = {}             # {order_id: status_text}
